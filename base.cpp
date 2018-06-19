@@ -18,7 +18,6 @@ int base::guardar(char *str){
   fclose(archivo);
   return status;
 }
-
 int base::buscar(char *tel){
   FILE *archivo;
   archivo = fopen("voto.txt", "r");
