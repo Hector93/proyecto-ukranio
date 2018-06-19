@@ -54,7 +54,8 @@ void* depositaCuenta(void* entero){
 void* guardar(void* Voto){
 
   voto* temp = (voto*)Voto;
-  std::cout << temp->numero << ", " << temp->RFC << ", " << (int)temp->partido << std::endl;
+  //  std::cout << temp->numero << ", " << temp->RFC << ", " << (int)temp->partido << std::endl;
+  std::cout << (char*) Voto << std::endl;
   return 0;
 }
 

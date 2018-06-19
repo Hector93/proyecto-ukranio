@@ -6,7 +6,7 @@ Solicitud::Solicitud(){
   requestId = 0;
 }
 
-char* Solicitud::doOperation(char *IP, int puerto, int operationId, char *arguments){
+char* Solicitud::doOperation(char *IP, int puerto, int operationId, const char *arguments){
   mensaje sol; 
   //cout << "solicitud\nIP: " << IP << ", puerto: " << puerto << ", operationId: " << operationId << ", arguments: " << arguments << endl; 
   sol.messageType = 0; //solicitud

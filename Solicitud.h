@@ -5,7 +5,7 @@
 class Solicitud{
  public:
   Solicitud();
-  char * doOperation(char *IP, int puerto, int operationId, char *arguments);
+  char * doOperation(char *IP, int puerto, int operationId, const char *arguments);
   string to_string();
   ~Solicitud();
 private:

@@ -3,19 +3,24 @@
 # include <string.h>
 #include <string>
 #include <iostream>
-using namespace std;
-class Voto{
 typedef struct{
   char numero[10];
   char RFC[13];
   char partido;
 }voto;
+
+using namespace std;
+class Voto{
+
 private:
   voto v;
+
+  void generaVoto();
   
-  public:
+public:
+  Voto();
   Voto(char *num, char *rfc,char partido);
-  
+  void regenera();
   //char *toString();
   std::string toString();
 };

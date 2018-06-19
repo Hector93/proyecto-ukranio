@@ -36,11 +36,15 @@ int main(int argc, char** argv){
 
   srand(time(NULL));
   voto test;
+  Voto asd = Voto();
   for(unsigned int i = 0; i < numVotos; i++){
     test = generaVoto();
-    cout << sol.doOperation(IP, puerto, 0, (char*)&test);
+    asd.regenera();
+    
+    //    cout << sol.doOperation(IP, puerto, 0, (char*)&test);
+    cout << sol.doOperation(IP, puerto, 0, asd.toString().c_str());
   }
 
-  puts("termino\n");
+      puts("termino\n");
   return 0;
 }
