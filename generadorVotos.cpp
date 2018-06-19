@@ -32,15 +32,13 @@ int main(int argc, char** argv){
   
   char *IP = argv[1];
   int puerto = atoi(argv[2]);
-
   Solicitud sol = Solicitud();
 
   srand(time(NULL));
   voto test;
   for(unsigned int i = 0; i < numVotos; i++){
     test = generaVoto();
-    cout << sol.doOperation(IP, puerto, 1, (char*)&test);
-    //    cout << test.numero << ", " << test.RFC << ", " << (int)test.partido <<endl;
+    cout << sol.doOperation(IP, puerto, 0, (char*)&test);
   }
 
   puts("termino\n");
