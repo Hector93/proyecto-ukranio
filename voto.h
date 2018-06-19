@@ -21,6 +21,8 @@ public:
   Voto();
   Voto(char *num, char *rfc,char partido);
   void regenera();
+  string getRFC();
+  string getNum();
   //char *toString();
   std::string toString();
 };

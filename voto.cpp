@@ -39,3 +39,13 @@ void Voto::generaVoto(){
   sprintf(&v.RFC[8],"%02d", (rand() % 30)+1);
   v.partido = rand()%12;
 }
+
+string Voto::getNum(){
+  string auxRFC = v.RFC;
+  return auxRFC;
+}
+
+string Voto::getRFC(){
+  string auxNumero = v.numero;
+  return auxNumero;
+}
