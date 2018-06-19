@@ -19,6 +19,7 @@ private:
   
 public:
   Voto();
+  Voto (char *str);
   Voto(char *num, char *rfc,char partido);
   void regenera();
   string getRFC();

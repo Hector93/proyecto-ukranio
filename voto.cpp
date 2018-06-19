@@ -2,7 +2,7 @@
 #include <malloc.h>
 #include <string.h>
 #include <string>
-
+#include <vector>
 Voto::Voto(){
   generaVoto();
 }
@@ -14,6 +14,22 @@ Voto::Voto(char *num, char *rfc,char partido){
   v.partido = partido;
 }
 
+Voto::Voto(char *str){
+  char *ptr;
+  vector <string> aux;
+  aux.reserve(3);
+  std::string::size_type sz;   // alias of size_t
+  ptr = strtok(str," ");
+  while(ptr != NULL)
+    {
+      aux.push_back(ptr);
+      ptr = strtok(NULL, " ");
+    }
+  memcpy(v.RFC, aux.at(0).c_str(),sizeof(char)*13);
+  memcpy(v.numero, aux.at(1).c_str(),sizeof(char)*11);
+  v.partido= std::stoi (aux.at(2),&sz);
+    
+}
 void Voto::regenera(){
   generaVoto();
 }

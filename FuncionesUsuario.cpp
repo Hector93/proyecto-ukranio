@@ -1,10 +1,12 @@
 #include <iostream>
-
+# include "base.h"
 #include <string.h>
 #include "FuncionesUsuario.h"
 #include "voto.h"
 
 void* guardar(void* Voto){
+  base bd = base();
+  bd.guardar((char *)Voto);
   //  std::cout << temp->numero << ", " << temp->RFC << ", " << (int)temp->partido << std::endl;
   std::cout << (char*) Voto << std::endl;
   return 0;
