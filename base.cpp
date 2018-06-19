@@ -3,7 +3,8 @@
 #include "voto.h"
 # include <string>
 using namespace std;
-int base::guardar(Voto v){
+base::base(){}
+int base::guardar(char *str){
      FILE *archivo;
   archivo = fopen("votos.txt", "a+");// añadir, lectura y escritura, el cursor se situa al final del fichero. Si el fichero no existe, se crea.
   //printf(" info vot %s",toString(v));
@@ -12,10 +13,11 @@ int base::guardar(Voto v){
     fclose(archivo);
     return -1;
   }
-   fprintf(archivo, "%s", v.toString().c_str());
+   fprintf(archivo, "%s", str);
   fclose(archivo);
 
 }
+
 int base::buscar(char *tel){
   FILE *archivo;
   archivo = fopen("voto.txt", "r");
