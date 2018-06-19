@@ -1,7 +1,7 @@
 servidor: Respuesta InterfaceRpc FuncionesUsuario PaqueteDatagrama SocketDatagrama
 	g++ servidor.cpp Respuesta.o InterfaceRpc.o FuncionesUsuario.o PaqueteDatagrama.o SocketDatagrama.o -o servidor -g -Wall
 generadorVotos: Respuesta InterfaceRpc FuncionesUsuario PaqueteDatagrama SocketDatagrama Solicitud Voto
-	g++ generadorVotos.cpp Respuesta.o InterfaceRpc.o FuncionesUsuario.o PaqueteDatagrama.o SocketDatagrama.o Solicitud.o voto.o -o generador -g -Wall
+	g++ generadorVotos.cpp Respuesta.o InterfaceRpc.o FuncionesUsuario.o PaqueteDatagrama.o SocketDatagrama.o Solicitud.o voto.o -o generador -g -Wall -lpthread
 Respuesta: SocketDatagrama.o
 	g++ Respuesta.cpp -c -g -Wall
 InterfaceRpc: FuncionesUsuario.o
