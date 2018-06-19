@@ -22,8 +22,7 @@ std::string  Voto::toString(){
   //char *string = (char*)calloc(30,sizeof(char));
   string auxRFC = v.RFC;
   string auxNumero = v.numero;
-  // string auxPartido = v.partido;
-  std:: string s = auxRFC+" "+auxNumero+" "+v.partido;
+  std:: string s = auxRFC+" "+auxNumero+" "+to_string(v.partido);
   return s;
 }
 
