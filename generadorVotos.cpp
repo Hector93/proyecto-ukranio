@@ -39,8 +39,8 @@ int main(int argc, char** argv){
   
   puerto = atoi(argv[4]);
   thread th1(Hilo1,argv[1],puerto,ref(listo1));
-  thread th2(Hilo1,argv[2],puerto,ref(listo2));
-  thread th3(Hilo1,argv[3],puerto,ref(listo3));
+  thread th2(Hilo1,argv[2],puerto+1,ref(listo2));
+  thread th3(Hilo1,argv[3],puerto+2,ref(listo3));
 
   srand(time(NULL));
   asd = Voto();
@@ -48,7 +48,7 @@ int main(int argc, char** argv){
   while(numeroEnvio < numVotos){
     if(listo1 == false && listo2 == false && listo3 == false){
       asd.regenera();
-      cout << asd.toString();
+      //cout << asd.toString();
       numeroEnvio++;
       listo1 = true;
       listo2 = true;

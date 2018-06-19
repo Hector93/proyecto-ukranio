@@ -24,6 +24,7 @@ int main (int argc, char* argv[])
     //cout << "contador: " << contadorRequest << endl;
     //cout<<"anterior: "<<anteriorRequest <<endl;
     //cout << "resultado: " << resultado->arguments <<endl;
+    cout << contadorRequest << ", " << anteriorRequest << endl;
     if(anteriorRequest == contadorRequest){
       cout << "Se ignoró petición repetida: " << anteriorRequest << endl;
       continue;
