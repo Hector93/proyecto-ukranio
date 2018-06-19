@@ -16,3 +16,5 @@ Solicitud: SocketDatagrama.o
 	g++ Solicitud.cpp -c -g -Wall
 Voto:
 	g++ voto.cpp -c -g -Wall
+Base:
+	g++ base.cpp -c -g -Wall
