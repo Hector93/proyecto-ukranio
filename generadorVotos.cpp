@@ -21,9 +21,10 @@ int main(int argc, char** argv){
   Solicitud sol = Solicitud();
 
   srand(time(NULL));
-  voto test;
+  //voto test;
   Voto asd = Voto();
   for(unsigned int i = 0; i < numVotos; i++){
+  	cout << asd.getRFC()<<endl;
     asd.regenera();
     cout << sol.doOperation(IP, puerto, 0, asd.toString().c_str());
   }
