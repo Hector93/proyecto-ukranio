@@ -40,12 +40,12 @@ void Voto::generaVoto(){
   v.partido = rand()%12;
 }
 
-string Voto::getNum(){
+string Voto::getRFC(){
   string auxRFC = v.RFC;
   return auxRFC;
 }
 
-string Voto::getRFC(){
+string Voto::getNum(){
   string auxNumero = v.numero;
   return auxNumero;
 }

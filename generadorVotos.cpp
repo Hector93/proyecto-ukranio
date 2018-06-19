@@ -46,6 +46,7 @@ int main(int argc, char** argv){
   thread th2(Hilo1,argv[2],puerto,ref(listo2));
 
   srand(time(NULL));
+
   asd = Voto();
 
   while(numeroEnvio < numVotos){
