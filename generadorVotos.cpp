@@ -11,8 +11,6 @@ using namespace std;
 const unsigned int numVotos = 88700000;
 
 Voto asd;
-//Solicitud sol;
-char *IP;
 int puerto;
 
 unsigned int numeroEnvio = 0;
@@ -34,23 +32,21 @@ void Hilo1(char *IP, int puerto,bool &ready){
 }
 
 int main(int argc, char** argv){
-  if (argc != 4){
+  if (argc != 5){
     cout << "Error en argumentos" << endl; 
     return -1;
   }
   
-  IP = argv[1];
-  puerto = atoi(argv[2]);
-  //sol = Solicitud();
+  puerto = atoi(argv[4]);
   thread th1(Hilo1,argv[1],puerto,ref(listo1));
-  thread th2(Hilo1,argv[2],puerto,ref(listo2));
+  thread th2(Hilo1,argv[2],puerto+1,ref(listo2));
+  thread th3(Hilo1,argv[3],puerto+2,ref(listo3));
 
   srand(time(NULL));
-
   asd = Voto();
 
   while(numeroEnvio < numVotos){
-    if(listo1 == false && listo2 == false){
+    if(listo1 == false && listo2 == false && listo3 == false){
       asd.regenera();
       numeroEnvio++;
       listo1 = true;
@@ -59,15 +55,9 @@ int main(int argc, char** argv){
     }
   }
 
-  /*
-    for(numeroEnvio = 0; numeroEnvio < numVotos; numeroEnvio++){
-    asd.regenera();
-    listo = true;
-    //cout << sol.doOperation(IP, puerto, 0, asd.toString().c_str());
-    }
-  */
   th1.join();
-  //  th2.join();
+  th2.join();
+  th3.join();
   puts("termino\n");
   return 0;
 }

@@ -10,7 +10,7 @@ char* Solicitud::doOperation(char *IP, int puerto, int operationId, const char *
   mensaje sol; 
   //cout << "solicitud\nIP: " << IP << ", puerto: " << puerto << ", operationId: " << operationId << ", arguments: " << arguments << endl; 
   sol.messageType = 0; //solicitud
-  cout << "reqId: " << requestId << endl;
+  //cout << "reqId: " << requestId << endl;
   sol.requestId = requestId;
   memcpy(sol.IP, IP, sizeof(sol.IP));
   sol.puerto = puerto;
