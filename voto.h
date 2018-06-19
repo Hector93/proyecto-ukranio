@@ -5,4 +5,5 @@ typedef struct{
   char RFC[13];
   char partido;
 }voto;
+char *toString();
 #endif
