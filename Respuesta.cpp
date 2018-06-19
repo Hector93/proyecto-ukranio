@@ -1,7 +1,7 @@
 
 #include "Respuesta.hpp"
 #include "SocketDatagrama.h"
-#include "mensaje.hpp"
+#include "Mensaje.h"
 
 Respuesta::Respuesta(int pl) {
     socketlocal = new SocketDatagrama(pl);
