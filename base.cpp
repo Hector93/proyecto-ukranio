@@ -6,6 +6,7 @@ using namespace std;
 base::base(){}
 int base::guardar(char *str){
      FILE *archivo;
+     int status;
   archivo = fopen("votos.txt", "a+");// añadir, lectura y escritura, el cursor se situa al final del fichero. Si el fichero no existe, se crea.
   //printf(" info vot %s",toString(v));
   if(!archivo){
@@ -13,9 +14,9 @@ int base::guardar(char *str){
     fclose(archivo);
     return -1;
   }
-   fprintf(archivo, "%s", str);
+  status =  fprintf(archivo, "%s", str);
   fclose(archivo);
-
+  return status;
 }
 
 int base::buscar(char *tel){
@@ -31,5 +32,5 @@ int base::buscar(char *tel){
   while (fscanf(archivo,"%s",aux) != EOF){
     cadena = aux;
   }
-  
+  return 1;
 }
