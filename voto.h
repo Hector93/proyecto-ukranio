@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 typedef struct{
-  char numero[10];
+  char numero[11];
   char RFC[13];
   char partido;
 }voto;

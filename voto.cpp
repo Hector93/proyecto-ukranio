@@ -28,8 +28,8 @@ std::string  Voto::toString(){
 
 void Voto::generaVoto(){
   unsigned long int numero = (rand() % 99999999);
-  snprintf(v.numero, 10, "%ld", numero + 5500000000);
-  v.numero[9] = '\0';
+  snprintf(v.numero, 11, "%ld", numero + 5500000000);
+  v.numero[10] = '\0';
   v.RFC[0] = rand() % 25 + 65;
   v.RFC[1] = rand() % 25 + 65;
   v.RFC[2] = rand() % 25 + 65;
