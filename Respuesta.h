@@ -11,5 +11,6 @@ public:
   ~Respuesta();
 private:
   SocketDatagrama *socketlocal;
+  mensaje* temp;
 };
 #endif

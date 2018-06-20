@@ -13,7 +13,7 @@ Respuesta::Respuesta(int pl){
 
 struct mensaje* Respuesta::getRequest(){
   PaqueteDatagrama datagrama = PaqueteDatagrama(sizeof(struct mensaje));
-  mensaje *temp;
+  //  mensaje *temp;
   fptr tempFunc;
   void * resultados;
   char *aux;
@@ -24,7 +24,7 @@ struct mensaje* Respuesta::getRequest(){
   memcpy(temp, aux, sizeof(struct mensaje));
   contadorRequest = temp->requestId;
   if(anteriorRequest == contadorRequest){
-    	cout << "Se ignoró petición repetida: " << anteriorRequest << endl;
+    cout << "Se ignoró petición repetida: " << anteriorRequest << endl;
   }
   else{
     tempFunc = selectOp(temp->operationId);

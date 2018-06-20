@@ -21,7 +21,7 @@ char* Solicitud::doOperation(char *IP, int puerto, int operationId, const char *
   socketlocal->envia(datagrama); 
   //  socketlocal->recibe(datagrama);
   int i;
-  for(i = 0; socketlocal->recibe(datagrama, 1, 0) <= 0 && i < 7; i++){
+  for(i = 0; socketlocal->recibe(datagrama, 1, 0) <= 0 && i < 3; i++){
     if(i >= 6){
       fprintf(stderr, "Servidor no disponible intente mas tarde %s, %d",IP, puerto);
       return NULL;
